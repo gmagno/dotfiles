@@ -1,5 +1,5 @@
 function cpufreq
-    set default_max_freq 3.5
+    set default_max_freq 2.7
     set num_args (count $argv)
     set max_freq $default_max_freq
 
