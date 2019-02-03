@@ -218,7 +218,9 @@ bindsym XF86MonBrightnessUp exec light -A 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 # bind lockscreen
-bindsym $mod+shift+x exec i3lock -c 000000
+# bulb image taken from https://wonderfulengineering.com/wp-content/uploads/2016/01/black-wallpaper-11.png
+bindsym $mod+shift+x exec i3lock -c 000000 -i ~/.config/i3/bulb.png
+bindsym $mod+shift+g exec "i3lock -c 000000; systemctl suspend"
 
 # update i3blocks with Num_Lock and Caps_Lock status
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
