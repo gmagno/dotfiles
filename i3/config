@@ -96,15 +96,15 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1: Terminal"
-set $ws2 "2: Firefox"
+set $ws1 "1: Firefox"
+set $ws2 "2: Terminal"
 set $ws3 "3: Code"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9: Slack"
+set $ws9 "9: Chat"
 set $ws10 "10"
 
 # switch to workspace
@@ -131,14 +131,17 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
-assign [class="Terminator"] $ws1
-assign [class="Firefox"] $ws2
+assign [class="Firefox"] $ws1
+#assign [class="Google-chrome"] $ws1
+assign [class="Terminator"] $ws2
 assign [class="Code - Insiders"] $ws3
 assign [class="Slack"] $ws9
+assign [class="discord"] $ws9
 
 exec terminator
 exec firefox
 exec slack
+exec discord
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -219,11 +222,25 @@ bindsym XF86MonBrightnessDown exec light -U 10 # decrease screen brightness
 
 # bind lockscreen
 # bulb image taken from https://wonderfulengineering.com/wp-content/uploads/2016/01/black-wallpaper-11.png
-bindsym $mod+shift+x exec i3lock -c 000000 -i ~/.config/i3/bulb.png
-bindsym $mod+shift+g exec "i3lock -c 000000; systemctl suspend"
+bindsym $mod+shift+x exec i3lock -c 000000 -i /home/gm/.config/i3/bulb.png
+bindsym $mod+shift+Escape exec "i3lock -c 000000 -i /home/gm/.config/i3/bulb.png; systemctl suspend"
 
 # update i3blocks with Num_Lock and Caps_Lock status
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+
+# start the clipboard manager
+exec diodon
+
+# screenshot
+bindsym $mod+F12 exec maim --format png /home/gm/Pictures/$(date +%F-%T).png
+bindsym $mod+control+F12 exec maim --format png /dev/stdout | xclip -selection clipboard -t image/png
+bindsym $mod+shift+F12 exec maim -s --format png /home/gm/Pictures/$(date +%F-%T).png
+bindsym $mod+shift+control+F12 exec maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png
+
+#bindsym $mod+control+F12 exec gnome-screenshot -c
+#bindsym Mod1+Sys_Req exec gnome-screenshot -w
+#bindsym Shift+Print exec gnome-screenshot -a
+#bindsym Control+Shift+Print exec gnome-screenshot
 
 
