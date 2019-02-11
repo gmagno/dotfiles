@@ -1,0 +1,42 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "editor.fontSize": 16,
+    "editor.fontFamily": "Hermit, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "gitlens.keymap": "chorded",
+    "latex-workshop.view.pdf.viewer": "tab",
+    "git.autofetch": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "jupyter.appendResults": true,
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "gitlens.advanced.telemetry.enabled": false,
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 2,
+    "gitlens.historyExplorer.enabled": true,
+    "python.jediEnabled": false,
+    "git.confirmSync": false,
+    "matlab.mlintpath": "/usr/local/bin/mlint",
+    "matlab-runner.matlabPath": "/usr/local/bin/matlab",
+    "editor.renderWhitespace": "none",
+    "editor.renderControlCharacters": false,
+    "breadcrumbs.enabled": true,
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "terminal.integrated.shell.linux": "/usr/bin/fish",
+    "diffEditor.ignoreTrimWhitespace": true,
+    "workbench.sideBar.location": "left",
+    "editor.rulers": [
+        80
+    ],
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native"
+}
