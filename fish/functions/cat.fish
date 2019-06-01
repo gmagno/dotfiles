@@ -1,4 +1,4 @@
 function cat
-    bat $argv
+    command /usr/local/bin/bat $argv
 end
 

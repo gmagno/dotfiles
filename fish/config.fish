@@ -9,3 +9,5 @@ function my_postexec --on-event fish_postexec
     if [ -n "$argv" ]; paplay /usr/share/sounds/ubuntu/stereo/button-toggle-off.ogg; end
 end
 
+source /etc/grc.fish
+
