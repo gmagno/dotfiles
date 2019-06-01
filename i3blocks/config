@@ -79,7 +79,13 @@ interval=30
 # (defaults to 10 for 10%).
 [disk]
 label=SSD
-#instance=/mnt/data
+separator=false
+instance=/home
+interval=30
+
+[disk]
+label=HDD
+instance=/storage
 interval=30
 
 # Network interface monitoring
