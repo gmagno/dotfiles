@@ -10,4 +10,13 @@ function my_postexec --on-event fish_postexec
 end
 
 source /etc/grc.fish
+set -gx EDITOR vim
+set -gx PAGER most
+set -gx BAT_PAGER "less -XRF"
+
+kitty + complete setup fish | source
+
+set -gx PATH /usr/local/cuda-10.1/bin $PATH
+set -gx PATH /usr/local/cuda-10.1/NsightCompute-2019.3 $PATH
+set -gx LD_LIBRARY_PATH /usr/local/cuda-10.1/lib64 $LD_LIBRARY_PATH
 
