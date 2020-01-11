@@ -1,0 +1,62 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+    colors = true
+    interval = 5
+}
+
+order = "speedtest"
+order += "apt_updates"
+
+# order = "ipv6"
+order = "sysdata"
+order += "nvidia_smi"
+# order += "disk /"
+# order += "diskdata"
+
+# order += "wireless _first_"
+# order += "ethernet _first_"
+# order += "battery all"
+# order += "lm_sensors"
+order += "volume_status"
+order += "battery_level"
+order += "tztime local"
+
+
+sysdata {
+    format = "CPU {cpu_used_percent}% {cpu_temp}{temp_unit} FREQ {cpu_freq_avg}/{cpu_freq_max}{cpu_freq_unit}"
+}
+
+battery_level {
+    measurement_mode = "acpi"
+    blocks = "_▁▂▃▄▅▆▇█"
+    format = "{icon} {percent}%"
+}
+
+speedtest {
+    format = "BW [\?soft  ][\?if=elapsed [\?color=darkgray [time "
+    format += "[\?color=elapsed_time {elapsed_time} s]]]|[\?color=darkgray "
+    # format += "Ping [\?color=ping {ping} ms] "
+    format += "↓ [\?color=download {download}Mbps] "
+    format += "↑ [\?color=upload {upload}Mbps]]]"
+}
+
+nvidia_smi {
+    format_gpu = "{gpu_name} [\?color=temperature.gpu {temperature.gpu}°C] "
+    #format_gpu += "[\?color=memory.used_percent {memory.used} {memory.used_unit}"
+    #format_gpu += "[\?color=darkgray&show \|]{memory.used_percent:.1f}%]"
+}
+
+apt_updates {
+    format = "UPD[\?not_zero : {apt}]"
+}
+
+tztime local {
+    format = "%a %d-%m-%Y %H:%M:%S %Z"
+}

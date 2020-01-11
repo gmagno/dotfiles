@@ -14,9 +14,20 @@ set -gx EDITOR vim
 set -gx PAGER most
 set -gx BAT_PAGER "less -XRF"
 
-kitty + complete setup fish | source
+set -x PATH $PATH /usr/local/go/bin/
+set -x GOPATH $HOME/go
 
-set -gx PATH /usr/local/cuda-10.1/bin $PATH
-set -gx PATH /usr/local/cuda-10.1/NsightCompute-2019.3 $PATH
-set -gx LD_LIBRARY_PATH /usr/local/cuda-10.1/lib64 $LD_LIBRARY_PATH
+#set -gx PATH /usr/local/cuda-10.1/bin $PATH
+#set -gx PATH /usr/local/cuda-10.1/NsightCompute-2019.3 $PATH
+#set -gx LD_LIBRARY_PATH /usr/local/cuda-10.1/lib64 $LD_LIBRARY_PATH
+
+
+
+# my conda initialize fix
+#eval /home/gm/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+#eval /home/gm/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
 

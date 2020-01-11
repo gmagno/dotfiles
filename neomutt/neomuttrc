@@ -1,0 +1,99 @@
+# Minimal configuration for Neomutt/Mutt and Gmail/G Suite
+
+set from="Goncalo Magno <goncalo@gmagno.dev>"
+
+# Decrypts passwords quietly
+# see: https://wiki.archlinux.org/index.php/Mutt#Passwords_management
+# source "gpg -dq $HOME/.my-pwds.gpg |"
+
+# Username and password for your Gmail/G Suite account
+set imap_user = "goncalo@gmagno.dev"
+# Password assigned from decrypted file
+# set imap_pass = $my_pass
+set imap_pass = <password goes here>
+
+# activate TLS if available on the server
+set ssl_starttls=yes
+
+# always use SSL when connecting to a server
+set ssl_force_tls=yes
+# Specifies the default location of your mailboxes
+set folder = "imaps://imap.gmail.com:993"
+
+# Configure Simple Mail Transfer Protocol for sending mail
+# for Gmail
+# set smtp_url = "smtps://yourusername@smtp.gmail.com:587"
+# for G Suite with own domain
+# set smtp_url = "smtps://goncalo@gmagno.dev@smtp.gmail.com:587"
+set smtp_url = "smtp://goncalo@gmagno.dev@smtp.gmail.com:587"
+set smtp_pass = <password goes here>
+
+# Location of inbox
+set spoolfile = "+INBOX"
+# Location of drafts
+set postponed = "+[GMail]/Drafts"
+
+# Activate caching, as it can greatly improve speed
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+
+# Disable saving outgoing mail since Gmail saves them by default.
+set record = ""
+
+# set imap_poll_timeout = 5
+set mail_check=10
+set timeout=5
+
+# sidebar
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+bind index,pager B sidebar-toggle-visible
+set sidebar_width = 25
+#set sidebar_divider_char = '|'
+
+
+# Neomutt Monokai Theme
+
+#---------- Colors ----------
+set my_background = "color234"
+set my_gray = "color245"
+set my_magenta = "color198"
+set my_brightmagenta = "brightcolor198"
+set my_green = "color112"
+set my_brightgreen = "brightcolor112"
+set my_red = "color160"
+set my_darkgray = "color235"
+set my_tan = "color185"
+set my_blue = "color81"
+set my_lavender = "color141"
+
+# index menu
+color index $my_gray $my_background ".*"
+color index_date $my_magenta $my_background
+color index_subject white $my_background "~R"
+color index_subject brightwhite $my_background "~U"
+color index_author $my_green $my_background "~R"
+color index_author $my_brightgreen $my_background "~U"
+
+# message display
+color normal white $my_background
+color error $my_red $my_background
+color tilde $my_darkgray $my_background
+color message white $my_background
+color markers $my_red white
+color attachment white $my_background
+color bold brightwhite $my_background
+color underline brightcolor81 $my_background
+color quoted $my_tan $my_background
+color quoted1 $my_blue $my_background
+color quoted2 $my_green $my_background
+color quoted3 $my_lavender $my_background
+color hdrdefault $my_gray $my_background
+color header brightwhite $my_background "^(Subject)"
+
+color search $my_lavender $my_background
+color status $my_gray $my_darkgray
+# header/footer menu
+color indicator $my_background $my_tan
+# thread tree arrows
+color tree $my_tan $my_background

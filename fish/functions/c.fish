@@ -1,3 +1,3 @@
 function c --description 'alias xclip'
-	command xclip $argv;
+	command xclip -selection clipboard $argv;
 end
