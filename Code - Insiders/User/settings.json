@@ -1,25 +1,43 @@
 {
-    "window.zoomLevel": 2,
-    "C_Cpp.updateChannel": "Insiders",
-    "editor.minimap.enabled": false,
-    "git.autofetch": true,
-    "python.insidersChannel": "weekly",
-    "cmake.configureOnOpen": true,
-    "workbench.iconTheme": "vscode-icons",
-    "blender.executables": [
-        {
-            "path": "/opt/blender/blender-2.80-linux-glibc217-x86_64/blender",
-            "name": "",
-            "isDebug": false
-        },
-        {
-            "path": "/opt/blender/blender-2.81a-linux-glibc217-x86_64/blender",
-            "name": "",
-            "isDebug": false
-        }
-    ],
-    "editor.largeFileOptimizations": false,
-    "[jinja-html]": {},
-    "latex-workshop.view.pdf.viewer": "external",
-    "workbench.editor.showTabs": false
+  "editor.fontFamily": "hermit, 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+  "window.zoomLevel": 3,
+  "C_Cpp.updateChannel": "Insiders",
+  "git.autofetch": true,
+  "python.insidersChannel": "off",
+  "cmake.configureOnOpen": true,
+  "workbench.iconTheme": "vscode-icons",
+  "blender.executables": [
+    {
+      "path": "/opt/blender/blender-2.80-linux-glibc217-x86_64/blender",
+      "name": "",
+      "isDebug": false
+    },
+    {
+      "path": "/opt/blender/blender-2.81a-linux-glibc217-x86_64/blender",
+      "name": "",
+      "isDebug": false
+    }
+  ],
+  "editor.largeFileOptimizations": false,
+  "[jinja-html]": {},
+  "latex-workshop.view.pdf.viewer": "external",
+  "workbench.editor.showTabs": false,
+  "editor.rulers": [80],
+  "todo-tree.tree.showScanModeButton": false,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.minimap.enabled": false,
+  "matlab.mlintpath": "/mnt/storage/home/apps/MATLAB/R2017a/bin/glnxa64/mlint",
+  "matlab.lintOnSave": true,
+  "matlab.matlabpath": "/mnt/storage/home/apps/MATLAB/R2017a/bin/matlab"
 }

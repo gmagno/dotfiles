@@ -111,6 +111,8 @@ font:
     #   - (Windows) Consolas
     #family: monospace
     family: hermit
+    #family: Kalam
+    #family: NovaMono
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -150,7 +152,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 11.0
+  size: 16.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -395,19 +397,25 @@ schemes:
     primary:
       background: '0x000000'
       foreground: '0xffffff'
+      #foreground:   '0xffffdb'
     normal:
       black:   '0x000000'
-      red:     '0xcd0000'
-      green:   '0x00cd00'
+      #red:     '0xcd0000'
+      red:     '0xff7a7a'
+      #green:   '0x00cd00'
+      green:   '0x5aff5a'
       yellow:  '0xcdcd00'
-      blue:    '0x0000ee'
+      #blue:    '0x0000ee'
+      blue:    '0x8da4de'
       magenta: '0xcd00cd'
       cyan:    '0x00cdcd'
       white:   '0xe5e5e5'
     bright:
       black:   '0x7f7f7f'
-      red:     '0xff0000'
-      green:   '0x00ff00'
+      #red:     '0xff0000'
+      red:     '0xff5a5a'
+      #green:   '0x00ff00'
+      green:   '0x5aff5a'
       yellow:  '0xffff00'
       blue:    '0x5c5cff'
       magenta: '0xff00ff'
@@ -477,7 +485,7 @@ colors: *xterm
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-#background_opacity: 1.0
+background_opacity: 1.0
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
@@ -488,18 +496,19 @@ colors: *xterm
 # Allow terminal applications to change Alacritty's window title.
 #dynamic_title: true
 
-#cursor:
+cursor:
   # Cursor style
   #
   # Values for `style`:
   #   - ▇ Block
   #   - _ Underline
   #   - | Beam
-  #style: Block
+  style: Block
+  #style: Beam
 
   # If this is `true`, the cursor will be rendered as a hollow box when the
   # window is not focused.
-  #unfocused_hollow: true
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
 #live_config_reload: true
@@ -574,6 +583,7 @@ mouse:
 
   # If this is `true`, the cursor is temporarily hidden when typing.
   #hide_when_typing: false
+  #hide_when_typing: true
 
   url:
     # URL launcher

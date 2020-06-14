@@ -1,16 +1,15 @@
 # Minimal configuration for Neomutt/Mutt and Gmail/G Suite
 
-set from="Goncalo Magno <goncalo@gmagno.dev>"
+set from="My Name <myemail@mail.com>"
 
 # Decrypts passwords quietly
 # see: https://wiki.archlinux.org/index.php/Mutt#Passwords_management
 # source "gpg -dq $HOME/.my-pwds.gpg |"
 
 # Username and password for your Gmail/G Suite account
-set imap_user = "goncalo@gmagno.dev"
+set imap_user = "myemail@mail.com"
 # Password assigned from decrypted file
-# set imap_pass = $my_pass
-set imap_pass = <password goes here>
+set imap_pass = $my_pass
 
 # activate TLS if available on the server
 set ssl_starttls=yes
@@ -24,9 +23,8 @@ set folder = "imaps://imap.gmail.com:993"
 # for Gmail
 # set smtp_url = "smtps://yourusername@smtp.gmail.com:587"
 # for G Suite with own domain
-# set smtp_url = "smtps://goncalo@gmagno.dev@smtp.gmail.com:587"
-set smtp_url = "smtp://goncalo@gmagno.dev@smtp.gmail.com:587"
-set smtp_pass = <password goes here>
+set smtp_url = "smtp://myemail@smtp.gmail.com:587"
+set smtp_pass = $my_pass
 
 # Location of inbox
 set spoolfile = "+INBOX"

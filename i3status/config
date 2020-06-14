@@ -11,7 +11,10 @@ general {
     interval = 5
 }
 
-order = "speedtest"
+
+#order += "external_script"
+order = "mpris"
+order += "speedtest"
 order += "apt_updates"
 
 # order = "ipv6"
@@ -59,4 +62,25 @@ apt_updates {
 
 tztime local {
     format = "%a %d-%m-%Y %H:%M:%S %Z"
+}
+
+external_script {
+#    format = "{output}"
+#    script_path = "/bin/bash -c 'http --body wttr.in format==2'"
+#    script_path = "http --body wttr.in format==2"
+    script_path = "curl 'wttr.in/?format=2'"
+}
+
+mpris {
+    format = "🎵 {previous} {stop} {pause} {play} {next}: {state} 🎧"
+    icon_next = ">>"
+    icon_previous = "<<"
+    icon_pause = "||"
+    icon_play = ">"
+    icon_stop = "□"
+    state_pause = "||"
+    state_play = "▷"
+    state_stop = "□"
+    format_none = "🎵😴🎧"
+    player_priority = "[mpd, cantata, vlc, bomi, *]"
 }
